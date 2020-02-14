@@ -14,3 +14,12 @@ h3{
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
 }
+
+h3 {
+  margin: 0px;
+  padding: 10px; /* Relleno */
+  border:solid;
+  border-left: none;
+  border-right: none;
+  border-color: #20B2AA;
+}
