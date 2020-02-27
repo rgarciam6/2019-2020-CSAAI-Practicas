@@ -4,43 +4,36 @@
     <meta charset="utf-8">
     <title>Calculadora - Rebeca García Mencía</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer>
-    </script>
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <div>
-      <button type="button" name="button" id = "boton">7</button>
-      <button type="button" name="button" id = "boton">8</button>
-      <button type="button" name="button" id = "boton">9</button>
-      <button type="button" name="button" id = "division">/</button>
-    </div>
-    <div>
-      <button type="button" name="button" id = "boton">4</button>
-      <button type="button" name="button" id = "boton">5</button>
-      <button type="button" name="button" id = "boton">6</button>
-      <button type="button" name="button" id = "mult">x</button>
-    </div>
-    <div>
-      <button type="button" name="button" id = "boton">1</button>
-      <button type="button" name="button" id = "boton">2</button>
-      <button type="button" name="button" id = "boton">3</button>
-      <button type="button" name="button" id = "resta">-</button>
-    </div>
-    <div>
-      <button type="button" name="button" id = "boton">0</button>
-      <button type="button" name="button" id = "punto">.</button>
-      <button type="button" name="button" id = "suma">+</button>
-      <button type="button" name="button" id = "igual">=</button>
-    </div>
+    <br>
+    <p id="display">0</p>
+    <br>
+      <button class = "cdigito" value="7">7</button>
+      <button class = "cdigito" value="8">8</button>
+      <button class = "cdigito" value="9">9</button>
+      <button class ="coperacion" value="/">/</button>
+      <button id = "del">DEL</button>
 
+    <br>
+      <button class = "cdigito" value="4">4</button>
+      <button class = "cdigito" value="5">5</button>
+      <button class = "cdigito" value="6">6</button>
+      <button class ="coperacion" value="*">x</button>
+      <button id = "clear">AC</button>
 
-
-
-
-
-
-
-
-
+    <br>
+      <button class = "cdigito" value="1">1</button>
+      <button class = "cdigito" value="2">2</button>
+      <button class = "cdigito" value="3">3</button>
+      <button class ="coperacion" value="-">-</button>
+      <!--button class = "coperacion" value = "%">%</button-->
+    <br>
+      <button class = "cdigito" value="0">0</button>
+      <button id = "punto" value = ".">.</button>
+      <button class ="coperacion" value="+">+</button>
+      <button id = "igual">=</button>
+    <br>
   </body>
 </html>
