@@ -1,13 +1,27 @@
-body{
-  border: solid;
-  height: 300px;
-  width: 300px;
-  border-color:white;
-  background-color: #008080
-}
 button{
   width: 40px;
   height: 40px;
-  background-color: lightblue;
+  background-color: black;
   color: white;
+  font-weight: bold;
+  border-color: grey;
+  border-style: ridge;
+}
+p{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: right;
+  border: solid;
+  border-color: black;
+  width: 215px
+}
+div{
+  background-color: #e61c3a;
+  border: solid;
+  height: 300px;
+  width: 250px;
+  padding-left: 35px;
+  border-radius: 10px 10px 10px 10px;
 }
