@@ -6,8 +6,10 @@ igual = document.getElementById("igual")
 clear = document.getElementById("clear")
 punto = document.getElementById("punto")
 del= document.getElementById('del')
+percent = document.getElementById('percent')
 digitos = document.getElementsByClassName('cdigito')
 operaciones = document.getElementsByClassName('coperacion')
+
 for(i=0; i<digitos.length; i++){
   digitos[i].onclick = (ev) =>{
     digito(ev.target);
@@ -42,4 +44,7 @@ clear.onclick = () => {
 }
 del.onclick = () => {
   display.innerHTML = display.innerHTML.slice(0,-1);
+}
+percent.onclick = () => {
+  display.innerHTML = (display.innerHTML/100);
 }
