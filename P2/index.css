@@ -1,3 +1,6 @@
+body{
+  background-image: url(fondo.jpg);
+}
 button{
   width: 40px;
   height: 40px;
@@ -24,6 +27,9 @@ p{
 
 }
 div{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 200px;
   background-color: #e61c3a;
   border: solid;
   height: 300px;
