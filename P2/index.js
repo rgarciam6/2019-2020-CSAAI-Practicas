@@ -7,6 +7,7 @@ clear = document.getElementById("clear")
 punto = document.getElementById("punto")
 del= document.getElementById('del')
 percent = document.getElementById('percent')
+sqrt = document.getElementById('sqrt')
 digitos = document.getElementsByClassName('cdigito')
 operaciones = document.getElementsByClassName('coperacion')
 
@@ -47,4 +48,7 @@ del.onclick = () => {
 }
 percent.onclick = () => {
   display.innerHTML = (display.innerHTML/100);
+}
+sqrt.onclick = () => {
+  display.innerHTML = Math.sqrt(display.innerHTML);
 }

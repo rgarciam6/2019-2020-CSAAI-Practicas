@@ -18,7 +18,7 @@ p{
   text-align: right;
   border: solid;
   border-color: black;
-  width: 215px;
+  width: 255px;
   height: 30px;
   border-radius: 5px 5px 5px 5px;
 
@@ -27,7 +27,7 @@ div{
   background-color: #e61c3a;
   border: solid;
   height: 300px;
-  width: 250px;
+  width: 300px;
   padding-left: 35px;
   border-radius: 10px 10px 10px 10px;
 }
