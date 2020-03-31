@@ -10,29 +10,11 @@ console.log(`canvas: Anchura: ${canvas.width}, Altura: ${canvas.height}`);
 //-- Obtener el contexto para pintar en el canvas
 const ctx = canvas.getContext("2d");
 
-
-//-- Obtener Sonidos
-const sonido_raqueta = new Audio("pong-raqueta.mp3");
-const sonido_rebote = new Audio("pong-rebote.mp3");
-
-//-- Estados del juego
-const ESTADO = {
-  INIT: 0,
-  SAQUE: 1,
-  JUGANDO: 2,
-  SAQUE_DCHA: 3
-}
-
-//-- Variable de estado
-//-- Arrancamos desde el estado inicial
-let estado = ESTADO.INIT;
 //-- Pintar todos los objetos en el canvas
 function draw() {
+
   //----- Dibujar la Bola
-  //-- Solo en el estado de jugando
-  if (estado == ESTADO.JUGANDO) {
-    bola.draw();
-  }
+  bola.draw();
 
   //-- Dibujar las raquetas
   raqI.draw();
@@ -59,20 +41,6 @@ function draw() {
   ctx.fillStyle = "white";
   ctx.fillText(raqI.puntos, 200, 80);
   ctx.fillText(raqD.puntos, 340, 80);
-
-  //-- Dibujar el texto de sacar
-  if (estado == ESTADO.SAQUE) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "yellow";
-    ctx.fillText("Saca!", 30, 350);
-  }
-
-  //-- Dibujar el texto de comenzar
-  if (estado == ESTADO.INIT) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "green";
-    ctx.fillText("Pulsa Start!", 30, 350);
-  }
 }
 
 //---- Bucle principal de la animación
@@ -90,24 +58,13 @@ function animacion()
   // que "rebote" y vaya en el sentido opuesto
   if (bola.x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
-    //bola.vx = bola.vx * -1;
+    bola.vx = bola.vx * -1;
     raqI.puntos+=1;
-    //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
-    estado = ESTADO.SAQUE_DCHA;
-    bola.init_dcha();
-
   }
   //--Comprobar si la bola ha alcanzado el límite izquierdo
   if(bola.x <= (canvas.width ==0)){
-    //bola.vx = bola.vx*-1;
+    bola.vx = bola.vx*-1;
     raqD.puntos+=1;
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
-    estado = ESTADO.SAQUE;
-    bola.init();
-
   }
 
   //--Comprobar si la bola alcanza el límite inferior y superior
@@ -122,17 +79,11 @@ function animacion()
   if (bola.x >= raqI.x && bola.x <=(raqI.x + raqI.width) &&
       bola.y >= raqI.y && bola.y <=(raqI.y + raqI.height)) {
       bola.vx = bola.vx * -1;
-      //-- Reproducir sonido
-      sonido_raqueta.currentTime = 0;
-      sonido_raqueta.play();
   }
   //--Comprobar si hay colisión con la raqueta derecha
   if (bola.x >= raqD.x && bola.x <=(raqD.x + raqD.width) &&
       bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
       bola.vx = bola.vx * -1;
-      //-- Reproducir sonido
-      sonido_raqueta.currentTime = 0;
-      sonido_raqueta.play();
   }
 
   //-- Actualizar coordenada x de la bola, en funcion de
@@ -165,58 +116,28 @@ setInterval(()=>{
 
 //-- Retrollamada de las teclas
 window.onkeydown = (e) => {
-switch (e.key) {
-  case "s":
-    raqI.v = raqI.v_ini;
-    break;
-  case "w":
-    raqI.v = raqI.v_ini * -1;
-    break;
-  case "ArrowUp":
-    raqD.v = raqD.v_ini * -1;
-    break;
-  case "ArrowDown":
-    raqD.v = raqD.v_ini;
-    break;
-  case " ":
 
-    //-- El saque solo funciona en el estado de SAQUE
-    if (estado == ESTADO.SAQUE) {
-      //-- Reproducir sonido
-      sonido_raqueta.currentTime = 0;
-      sonido_raqueta.play();
-
+  switch (e.key) {
+    case "s":
+      raqI.v = raqI.v_ini;
+      break;
+    case "w":
+      raqI.v = raqI.v_ini * -1;
+      break;
+    case "ArrowUp":
+      raqD.v = raqD.v_ini * -1;
+      break;
+    case "ArrowDown":
+      raqD.v = raqD.v_ini;
+      break;
+    case " ":
       //-- Llevar bola a su posicion incicial
       bola.init();
 
       //-- Darle velocidad
       bola.vx = bola.vx_ini;
-      bola.vy = bola.vy_ini;
-
-      //-- Cambiar al estado de jugando!
-      estado = ESTADO.JUGANDO;
-
-      return false;
-    }
-    if (estado == ESTADO.SAQUE_DCHA) {
-      //-- Reproducir sonido
-      sonido_raqueta.currentTime = 0;
-      sonido_raqueta.play();
-
-      //-- Llevar bola a su posicion incicial
-      bola.init_dcha();
-
-      //-- Darle velocidad
-      bola.vx = bola.vx_ini_dcha;
-      bola.vy = bola.vy_ini_dcha;
-
-      //-- Cambiar al estado de jugando!
-      estado = ESTADO.JUGANDO;
-
-      return false;
-    }
-  default:
-}
+    default:
+  }
 }
 
 //-- Retrollamada de la liberacion de teclas
@@ -229,22 +150,4 @@ window.onkeyup = (e) => {
   if (e.key == "ArrowUp" || e.key == "ArrowDown") {
     raqD.v = 0;
   }
-}
-//-- Botón de arranque
-const start = document.getElementById("start");
-
-start.onclick = () => {
-  estado = ESTADO.SAQUE;
-  console.log("SAQUE!");
-  canvas.focus();
-}
-
-//-- Boton de stop
-const stop = document.getElementById("stop");
-
-stop.onclick = () => {
-  //-- Volver al estado inicial
-  estado = ESTADO.INIT;
-  bola.init();
-  start.disabled = false;
 }

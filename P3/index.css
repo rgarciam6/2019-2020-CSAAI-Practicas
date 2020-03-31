@@ -1,9 +1,10 @@
 /*Fondo de la página*/
 body{
-  background-color: lightblue;
+  background-image: url(fondo.jpg);
 }
 
 /*Estilo para el canvas: Negro*/
 #canvas{
   background-color: black;
+  margin-left: 450px;
 }
