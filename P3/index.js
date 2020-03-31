@@ -246,5 +246,7 @@ stop.onclick = () => {
   //-- Volver al estado inicial
   estado = ESTADO.INIT;
   bola.init();
+  raqD.puntos = 0;
+  raqI.puntos = 0;
   start.disabled = false;
 }
