@@ -55,23 +55,23 @@ function draw() {
   ctx.stroke();
 
   //------ Dibujar el tanteo
-  ctx.font = "100px Arial";
+  ctx.font = "70px 'Press Start 2P', cursive";
   ctx.fillStyle = "white";
   ctx.fillText(raqI.puntos, 200, 80);
   ctx.fillText(raqD.puntos, 340, 80);
 
   //-- Dibujar el texto de sacar
-  if (estado == ESTADO.SAQUE) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "yellow";
-    ctx.fillText("Saca!", 30, 350);
-  }
+  //if (estado == ESTADO.SAQUE) {
+    //ctx.font = "40px Arial";
+    //ctx.fillStyle = "yellow";
+    //ctx.fillText("Saca!", 30, 350);
+  //}
 
   //-- Dibujar el texto de comenzar
   if (estado == ESTADO.INIT) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "green";
-    ctx.fillText("Pulsa Start!", 30, 350);
+    ctx.font = "40px 'Press Start 2P', cursive";
+    ctx.fillStyle = "white";
+    ctx.fillText("Press Start", 90, 220);
   }
 }
 
