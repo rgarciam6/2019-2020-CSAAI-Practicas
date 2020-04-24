@@ -9,13 +9,11 @@ const ctx = canvas.getContext('2d');
 const deslizador_R = document.getElementById('deslizador_R');
 const deslizador_G = document.getElementById('deslizador_G');
 const deslizador_B = document.getElementById('deslizador_B');
-const deslizador_Gray = document.getElementById('deslizador_Gray');
 
 //-- Valor del deslizador
 const range_value_R = document.getElementById('range_value_R');
 const range_value_G = document.getElementById('range_value_G');
 const range_value_B = document.getElementById('range_value_B');
-const range_value_Gray = document.getElementById('range_value_Gray');
 
 //--Botones
 const gray = document.getElementById('gray');
