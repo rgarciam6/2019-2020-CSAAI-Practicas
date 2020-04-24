@@ -17,7 +17,10 @@ const range_value_B = document.getElementById('range_value_B');
 
 //--Botones
 const gray = document.getElementById('gray');
-const original = document.getElementById('original')
+const original = document.getElementById('original');
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const img3 = document.getElementById('img3');
 //-- Función de retrollamada de imagen cargada
 //-- La imagen no se carga instantaneamente, sino que
 //-- lleva un tiempo. Sólo podemos acceder a ella una vez
@@ -36,6 +39,15 @@ img.onload = function () {
   console.log("Imagen lista...");
 };
 
+img1.onclick = () => {
+  img.src="flores.jpg";
+}
+img2.onclick = () => {
+  img.src="cerezo.jpg";
+}
+img3.onclick = () => {
+  img.src="pradera.jpg";
+}
 
 function colors(){
 
