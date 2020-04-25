@@ -18,9 +18,12 @@ const range_value_B = document.getElementById('range_value_B');
 //--Botones
 const gray = document.getElementById('gray');
 const original = document.getElementById('original');
+const especular = document.getElementById('especular');
+const babajo = document.getElementById('babajo');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
+
 //-- Función de retrollamada de imagen cargada
 //-- La imagen no se carga instantaneamente, sino que
 //-- lleva un tiempo. Sólo podemos acceder a ella una vez
@@ -119,6 +122,20 @@ original.onclick = () => {
     deslizador_B.value = 255;
     range_value_B.innerHTML = deslizador_B.value;
 
+}
+
+especular.onclick =() => {
+      ctx.drawImage(img, 0,0);
+      ctx.translate(img.width,0);
+      ctx.scale(-1,1);
+      ctx.drawImage(img, 0, 0);
+}
+
+babajo.onclick = () =>{
+  ctx.drawImage(img, 0,0);
+  ctx.translate(0,img.height);
+  ctx.scale(1,-1);
+  ctx.drawImage(img, 0, 0);
 }
 
 console.log("Fin...");

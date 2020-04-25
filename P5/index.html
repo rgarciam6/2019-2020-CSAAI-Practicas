@@ -9,6 +9,16 @@
     <script src="index.js" defer></script>
   </head>
   <body>
+    <div id="fuentes">
+      <img id = "imagen" src="flores.jpg" width="100px">
+      <img id = "imagen" src="cerezo.jpg" width="100px">
+      <img id = "imagen" src="pradera.jpg" width="100px">
+    </div>
+    <div id="botones">
+      <button id = "img1">IMAGEN 1</button>
+      <button id = "img2">IMAGEN 2</button>
+      <button id = "img3">IMAGEN 3</button>
+    </div>
     <div id="content">
         <div id="left">
           <p>IMAGEN ORIGINAL</p>
@@ -19,13 +29,13 @@
           <canvas id="canvas"></canvas>
           <br>
         </div>
-
     </div>
-
     <div id="deslizador">
       <br>
       <button id = "original">ORIGINAL</button>
       <button id = "gray">GRAY</button>
+      <button id = "especular">ESPECULAR</button>
+      <button id = "babajo">B.ABAJO</button>
       <br>
       <span class ="barra">Establece el umbral de rojo:</span>
       <input type="range" id="deslizador_R" min="0" max="255" value="255"/>
@@ -37,14 +47,5 @@
       <input type="range" id="deslizador_B" min="0" max="255" value="255"/>
       <p id="range_value_B">00</p>
     </div>
-    <button id = "img1">IMAGEN 1</button>
-    <img src="flores.jpg" width="100px">
-
-    <button id = "img2">IMAGEN 2</button>
-    <img src="cerezo.jpg" width="100px">
-
-    <button id = "img3">IMAGEN 3</button>
-    <img src="pradera.jpg" width="100px">
-
   </body>
 </html>
