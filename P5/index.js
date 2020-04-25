@@ -20,6 +20,7 @@ const gray = document.getElementById('gray');
 const original = document.getElementById('original');
 const especular = document.getElementById('especular');
 const babajo = document.getElementById('babajo');
+const negativo = document.getElementById('negativo');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
@@ -136,6 +137,22 @@ babajo.onclick = () =>{
   ctx.translate(0,img.height);
   ctx.scale(1,-1);
   ctx.drawImage(img, 0, 0);
+}
+negativo.onclick = () =>{
+  ctx.drawImage(img, 0, 0);
+  //-- Obtener la imagen del canvas en pixeles
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  //-- Obtener el array con todos los píxeles
+  let data = imgData.data
+  for (let i = 0; i < data.length; i+=4){
+    var R = data[i];
+    var G = data[i+1];
+    var B = data[i+2];
+    data[i] = 255 - R;
+    data[i+1] = 255 - G;
+    data[i+2] = 255 - B;
+}
+  ctx.putImageData(imgData, 0, 0);
 }
 
 console.log("Fin...");

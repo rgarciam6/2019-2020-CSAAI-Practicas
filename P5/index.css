@@ -42,11 +42,11 @@ span{
   font-family: 'Girassol', cursive;
   font-size: 20px;
   text-align: center;
-  margin-left: 140px;
+  margin-left: 80px;
   margin-bottom: 10px;
   margin-top: 20px;
 }
-#babajo{
+#babajo, #negativo{
   height: 30px;
   width: 100px;
   font-family: 'Girassol', cursive;
@@ -56,6 +56,9 @@ span{
   margin-bottom: 10px;
   margin-top: 20px;
 }
+
+
+
 #deslizador{
   margin-left: 500px;
 }
