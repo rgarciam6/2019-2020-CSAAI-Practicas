@@ -1,1 +1,2 @@
 # Práctica 3
+Práctica de videojuego pong. Juego de dos jugadores, la pala de la izquierda (player1) se maneja con las teclas w y s y la pala de la derecha (player2) se maneja con las teclas flecha arriba y abajo. Para comenzar el juego hay que pulsar el botón start y para sacar la bola hay que pulsar la tecla espacio. Para finalizar el juego pulsar el botón stop. Incluye sonidos al chocar con las palas y al meter gol.
