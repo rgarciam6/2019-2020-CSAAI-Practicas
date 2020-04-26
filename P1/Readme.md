@@ -1,4 +1,2 @@
 # Práctica 1: CV
-Readme de la práctica 1
-
-mas modificaciones
+Practica currículum. Práctina inicial, en ella se incorporan imágenes, listas, encabezados, párrafos y secciones div
