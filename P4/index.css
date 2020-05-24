@@ -24,12 +24,14 @@ button{
   margin-top: auto;
 }
 #video1,#video2,#video3,#imagen{
-  margin-top: auto;
+  display: inline-block;
+  /*margin-top: auto;*/
   margin-left: 350px;
-  margin-right: auto;
+  /*margin-right: auto;*/
 }
 #fuente1,#fuente2,#fuente3,#fuente4{
-  margin-top: auto;
+  display: inline-block;
+  /*margin-top: auto;*/
   margin-left: 350px;
-  margin-right: auto;
+  /*margin-right: auto;*/
 }
