@@ -5,3 +5,4 @@ Fuente 2: Opening Game of Thrones
 Fuente 3: Opening narcos
 Fuente 4: Imagen emisión en pruebas
 Al pulsar sobre los botones de cada una de las fuentes se selecciona la que quieres mostrar en el vídeo principal, esta quedará remarcada con un borde rojo.
+Navegador: Firefox
