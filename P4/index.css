@@ -9,10 +9,10 @@ p{
 button{
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 20px;
-  width: 150px;
-  height: 50px;
-  border-radius: 10px 10px 10px 10px;
+  font-size: 10px;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px 5px 5px 5px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -31,7 +31,7 @@ button{
 }
 #fuente1,#fuente2,#fuente3,#fuente4{
   display: inline-block;
-  margin-top: auto;
+  margin-top: 10px;
   margin-left: 300px;
   margin-right: auto;
 }
