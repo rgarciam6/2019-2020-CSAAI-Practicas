@@ -31,7 +31,7 @@ button{
 }
 #fuente1,#fuente2,#fuente3,#fuente4{
   display: inline-block;
-  margin-top: auto;
+  margin-top: 10px;
   margin-left: 350px;
   margin-right: auto;
 }
