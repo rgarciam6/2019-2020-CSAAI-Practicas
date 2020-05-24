@@ -24,13 +24,13 @@ button{
   margin-top: auto;
 }
 #video1,#video2,#video3,#imagen{
-  display: inline-block;
+  display: inline;
   margin-top: auto;
   margin-left: 350px;
   margin-right: auto;
 }
 #fuente1,#fuente2,#fuente3,#fuente4{
-  display: inline-block;
+  display: inline;
   margin-top: auto;
   margin-left: 350px;
   margin-right: auto;
