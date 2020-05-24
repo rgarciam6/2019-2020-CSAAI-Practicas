@@ -23,7 +23,7 @@ button{
   margin-right: auto;
   margin-top: auto;
 }
-/*#video1,#video2,#video3,#imagen{
+#video1,#video2,#video3,#imagen{
   display: inline-block;
   margin-top: auto;
   margin-left: 350px;
@@ -35,4 +35,3 @@ button{
   margin-left: 350px;
   margin-right: auto;
 }
-*/
